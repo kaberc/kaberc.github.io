@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>kaberc</title>
+        <meta name="description" content="kaberc lives here">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico in the root directory -->
+
+        <style type="text/css" media="screen">
+         html {
+             --bg-color: white;
+             --fg-color: black;
+             background-color: var(--bg-color);
+             color: var(--fg-color);
+             transition: 1s linear;
+         }
+
+         body {
+             height: 100vh;
+             margin: 0;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+
+         .big-k-letter {
+             margin: 0;
+             font-size: 70vh;
+             line-height: 1;
+         }
+
+         .info-block {
+             height: 80vh;
+             margin: auto
+             position: absolute;
+             left: 0;
+             right: 0;
+             top: 0;
+             bottom: 0;
+             max-width: 30rem;
+         }
+
+         ul {
+             list-style: none;
+         }
+
+         a {
+             color: unset;
+         }
+
+        </style>
+
+        <script type="text/javascript">
+            style = document.querySelector('html').style;
+
+            setInterval(() => {
+                bgColor = "hsl(" + Math.round(Math.random() * 90 + 180) + ',' +
+                          Math.round(Math.random() * 20 + 40) + '%,' +
+                          Math.round(Math.random() * 20 + 20) + '%)';
+
+                fgColor = "hsl(" + Math.round(Math.random() * 90 + 180) + ',' +
+                          Math.round(Math.random() * 20 + 40) + '%,' +
+                          Math.round(Math.random() * 20 + 60) + '%)';
+
+                style.setProperty('--bg-color', bgColor);
+                style.setProperty('--fg-color', fgColor);
+            }, 1000);
+         
+        </script>
+
+
+    </head>
+    <body>
+        <div class="info-block">
+            <h1 align="center" class="big-k-letter">k</h1>
+            <ul>
+                <li>telegram: <a target="_blank" href="http://t.me/kaberc">kaberc</a></li>
+                <li>e-mail: <a target="_blank" href="mailto:kaberc@gmail.com">kaberc@gmail.com</a></li>
+            </ul>
+
+        </div>
+    </body>
+</html>
