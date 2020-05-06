@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>kaberc</title>
+    <meta name="description" content="kaberc lives here">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+
+    <style type="text/css" media="screen">
+        html {
+            --bg-color: white;
+            --fg-color: black;
+            --display-greeting: none;
+            --display-link: block;
+            --display-images: none;
+            --images-width: 0vw;
+            background-color: var(--bg-color);
+            color: var(--fg-color);
+            transition: 0.1s linear;
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .link {
+            display: var(--display-link);
+            margin: 0;
+            font-size: 14vh;
+            line-height: 1;
+        }
+
+        .greeting {
+            display: var(--display-greeting);
+            font-size: 14vh;
+            z-index: 1;
+        }
+
+        small {
+            font-size: 5vh;
+        }
+
+        .image {
+            display: var(--display-images);
+            position: absolute;
+            animation: pulse 5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                width: 100vw;
+            }
+
+            50% {
+                width: 200vw;
+            }
+
+            100% {
+                width: 100vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a align="center" href="#" class="link" id="link">нажми сюда</a>
+    <span align="center" class="greeting">&nbsp;</span>
+    <img class="image" src="./5201052.jpg" />
+</body>
+
+<script type="text/javascript">
+    const style = document.querySelector('html').style;
+    const link = document.getElementById('link');
+    const greeting = document.querySelector('.greeting');
+
+    const getRandomPhrase = () => PHRASES[Math.ceil(Math.random() * PHRASES.length) - 1];
+
+    link.addEventListener('click', () => {
+        style.setProperty('--display-link', 'none');
+        style.setProperty('--display-greeting', 'block');
+        style.setProperty('--display-images', 'block');
+        style.setProperty('--fg-color', '#ffffff');
+
+        greeting.innerHTML = `Ты ${getRandomPhrase()}!`;
+        style.setProperty('--images-width', '1000vh');
+
+        setInterval(() => {
+            const bgColor = "hsl(" + Math.round(Math.random() * 90 + 180) + ',' +
+                Math.round(Math.random() * 20 + 40) + '%,' +
+                Math.round(Math.random() * 20 + 20) + '%)';
+
+            style.setProperty('--bg-color', bgColor);
+        }, 100);
+
+        setInterval(() => greeting.innerHTML = `Ты ${getRandomPhrase()}!`, 1000)
+    });
+
+    PHRASES = [
+        'лучший',
+        'красивый',
+        'восхитительный',
+        'прекрасный',
+        'норм',
+        'збс',
+        'очаровашка',
+        'потрясающий',
+        'обаятельный',
+        'мужественный',
+        'карантиноняша-2020',
+        'пидор',
+        'пидор',
+        'пидор',
+        'пидор',
+    ];
+
+</script>
+
+</html>
