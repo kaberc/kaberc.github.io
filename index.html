@@ -1,15 +1,18 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>kaberc</title>
         <meta name="description" content="kaberc lives here">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-        <!-- Place favicon.ico in the root directory -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://kaberc.com/">
+        <meta property="og:title" content="kaberc">
+        <meta property="og:description" content="kaberc lives here">
 
-        <style type="text/css" media="screen">
+        <style>
          html {
              --bg-color: white;
              --fg-color: black;
@@ -19,68 +22,64 @@
          }
 
          body {
-             height: 100vh;
+             height: 100dvh;
              margin: 0;
              display: flex;
              align-items: center;
              justify-content: center;
          }
 
-         .big-k-letter {
-             margin: 0;
-             font-size: 70vh;
-             line-height: 1;
+         .info-block {
+             box-sizing: border-box;
+             width: 100%;
+             max-width: 30rem;
+             padding-inline: 1rem;
+             height: 80dvh;
          }
 
-         .info-block {
-             height: 80vh;
-             margin: auto;
-             position: absolute;
-             left: 0;
-             right: 0;
-             top: 0;
-             bottom: 0;
-             max-width: 30rem;
+         .big-k-letter {
+             margin: 0;
+             font-size: min(70dvh, 120vw);
+             line-height: 1;
+             text-align: center;
          }
 
          ul {
              list-style: none;
+             padding: 0;
          }
 
          a {
              color: unset;
          }
-
         </style>
 
-        <script type="text/javascript">
-            style = document.querySelector('html').style;
+        <script>
+         {
+             const style = document.documentElement.style;
 
-            setInterval(() => {
-                bgColor = "hsl(" + Math.round(Math.random() * 90 + 180) + ',' +
-                          Math.round(Math.random() * 20 + 40) + '%,' +
-                          Math.round(Math.random() * 20 + 20) + '%)';
+             setInterval(() => {
+                 const bgColor = "hsl(" + Math.round(Math.random() * 90 + 180) + ',' +
+                                 Math.round(Math.random() * 20 + 40) + '%,' +
+                                 Math.round(Math.random() * 20 + 20) + '%)';
 
-                fgColor = "hsl(" + Math.round(Math.random() * 90 + 180) + ',' +
-                          Math.round(Math.random() * 20 + 40) + '%,' +
-                          Math.round(Math.random() * 20 + 60) + '%)';
+                 const fgColor = "hsl(" + Math.round(Math.random() * 90 + 180) + ',' +
+                                 Math.round(Math.random() * 20 + 40) + '%,' +
+                                 Math.round(Math.random() * 20 + 60) + '%)';
 
-                style.setProperty('--bg-color', bgColor);
-                style.setProperty('--fg-color', fgColor);
-            }, 1000);
-         
+                 style.setProperty('--bg-color', bgColor);
+                 style.setProperty('--fg-color', fgColor);
+             }, 1000);
+         }
         </script>
-
-
     </head>
     <body>
         <div class="info-block">
-            <h1 align="center" class="big-k-letter">k</h1>
+            <h1 class="big-k-letter">k</h1>
             <ul>
-                <li>telegram: <a target="_blank" href="http://t.me/kaberc">kaberc</a></li>
-                <li>e-mail: <a target="_blank" href="mailto:kaberc@gmail.com">kaberc@gmail.com</a></li>
+                <li>telegram: <a target="_blank" rel="noopener" href="https://t.me/kaberc">kaberc</a></li>
+                <li>e-mail: <a href="mailto:kaberc@gmail.com">kaberc@gmail.com</a></li>
             </ul>
-
         </div>
     </body>
 </html>
